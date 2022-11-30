@@ -21,6 +21,12 @@ impl Display for City {
                self.name, self.lat.abs(), lat_c, self.lon.abs(), lon_c)
     }
 }
+//added code to display color with {}
+impl Display for Color{
+     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+     write!(f, "Red: {}, Green: {}, Blue: {}", self.red, self.green, self.blue)
+    }
+}
 
 #[derive(Debug)]
 struct Color {
@@ -44,6 +50,7 @@ fn main() {
         Color { red: 0, green: 0, blue: 0 },
     ].iter() {
         // Hint : Fix the code so you can print it using {}
-        println!("{:?}", *color);
+        //Code fixed!
+        println!("{}", *color);
     }
 }
